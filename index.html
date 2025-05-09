@@ -1,0 +1,74 @@
+<html>
+<head>
+    <script src="pascal.js"></script>
+    <link href="pascal.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pascal triangle mod k yields the Sierpinski triangle</title>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R83Z59BP68');
+    </script>
+</head>
+<body onload="init();redraw();">
+    <div class="canvasWrapper">
+        <canvas height="500" width="500" id="canvas"></canvas>
+    </div>
+    <div class="sliderWrapper">
+        <input
+            type="range"
+            id="mod"
+            name="mod"
+            min="1"
+            max="20"
+            value="2"
+            step="1"
+            oninput="redraw();" />
+        <span class="kEquals">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi>k</mi>
+                <mo>=</mo>
+                <mn id="modValue">2</mn>
+            </math>
+        </span>
+    </div>
+    <div id="legendWrapper">
+        <div id="legendTitle">Legend</div>
+        <div id="legend">
+        </div>
+    </div>
+    <div class="explainWrapper">
+        <div class="explain">
+            The above figure shows Pascal's triangle, with each element colored according to its value modulo 
+            <math><mi>k</mi></math>
+            (where <math><mi>k</mi></math> is chosen using the slider above).
+            In other words, the cell in row 
+                <math display="inline">
+                    <mi>i</mi>
+                </math>, 
+                column 
+                <math display="inline">
+                    <mi>j</mi>
+                </math> 
+                has color 
+                <math display="block" style="padding-top: 4px;">
+                    <mrow>
+                        <mrow>
+                            <mo>(</mo>
+                            <mfrac linethickness="0">
+                                <mi>i</mi>
+                                <mi>j</mi>
+                            </mfrac>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>mod</mo>
+                        <mi>k</mi>
+                        <mo>.</mo>
+                    </mrow>
+                </math>
+        </div>
+    </div>
+</body>
+</html>

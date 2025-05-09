@@ -1,0 +1,44 @@
+.canvasWrapper {
+  text-align: center;
+  padding-bottom: 15px;
+}
+#canvas {
+  max-width: 100%;
+}
+.sliderWrapper {
+  text-align: center;
+}
+.sliderWrapper>slider {
+  width: 250px;
+}
+.kEquals {
+  padding-left: 15px;
+}
+.explainWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+.explain {
+  padding-top: 10px;
+  max-width: 400px;
+  text-align: justify;
+}
+#legendWrapper {
+  text-align: center;
+}
+#legend {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+#legendTitle {
+  padding: 20px 0 5px 0;
+  font-style: italic;
+}
+.legendEntry {
+  width: 20px;
+  height: 20px;
+  align-content: center;
+  text-align: center;
+}
